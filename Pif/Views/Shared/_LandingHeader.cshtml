@@ -1,0 +1,57 @@
+﻿<!-- Header -->
+<header id="header" class="header">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo float-left">
+            <a href="index.html" title=""><img src="~/LandingPage/images/logo-header.png" alt=""></a>
+        </div>
+        <!-- End Logo -->
+        <!-- Bars -->
+        <div class="bars" id="bars"></div>
+        <!-- End Bars -->
+        <!--Navigation-->
+        <nav class="navigation nav-r" id="navigation" data-menu-type="4000">
+            <div class="nav-inner">
+                <a href="#" class="bars-close" id="bars-close">Close</a>
+                <div class="tb">
+                    <div class="tb-cell">
+                        <ul class="menu-list text-uppercase">
+                            <li class="current-menu-parent">
+                                <a href="@Url.Action("Index","Home")" title="">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">About</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Register","Account")">Register</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Login","Account")">Login</a>
+                            </li>
+                            <li>
+                                <a href="#" title="">Account</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="@Url.Action("Dashboard","Home")">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Profile","Account")" title="">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("ChangePassword","Account")">Change Password</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--End Navigation-->
+    </div>
+</header>
+<!-- End Header -->

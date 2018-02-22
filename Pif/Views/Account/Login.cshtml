@@ -1,0 +1,71 @@
+﻿@model Pif.Models.Entities.AccountModel
+@{
+    Layout = "_Layout";
+}
+<!--Banner-->
+<section class="sub-banner">
+    <!--Background-->
+    <div class="bg-parallax bg-1"></div>
+    <!--End Background-->
+    <!-- Logo -->
+    <div class="logo-banner text-center">
+        <a href="" title="">
+            <img src="~/LandingPage/images/logo-banner.png" alt="">
+        </a>
+    </div>
+    <!-- Logo -->
+</section>
+<!--End Banner-->
+<!-- Main -->
+<div class="main">
+    <div class="container">
+        <div class="main-cn element-page bg-white clearfix">
+            <!--Breakcrumb-->
+            <section class="breakcrumb-sc">
+                <ul class="breadcrumb arrow">
+                    <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                    <li>User Sign In</li>
+                </ul>
+                <div class="support float-right">
+                    <small>Got a question?</small> 123-123-1234
+                </div>
+            </section>
+            <!--End Breakcrumb-->
+                    
+            <section class="user-profile">
+                <div class="user-form user-signup">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h2 class="user-profile__title">Sign In</h2>
+                            <p>Sign In now and book boxes! </p>
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new {@class = "", enctype = "multipart/form-data", role = "form"}))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                                <div class="field-input">
+                                    @Html.TextBoxFor(model => model.LoginName, new {@class = "input-text", placeholder = "Username / Email"})
+                                    @Html.ValidationMessageFor(model => model.LoginName, "", new {@class = "text-danger"})
+                                </div>
+                                <div class="field-input">
+                                    @Html.PasswordFor(model => model.Password, new {@class = "input-text", placeholder = "Password"})
+                                    @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+                                </div>
+                                <div class="field-input">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="offers">
+                                        <label for="offers"> Remember Me!</label>
+                                    </div>
+                                </div>
+                                <div class="field-input">
+                                    <button class="awe-btn awe-btn-1 awe-btn-medium btn-block">Sign up</button>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- End Main -->
